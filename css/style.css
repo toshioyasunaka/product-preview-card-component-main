@@ -16,8 +16,7 @@ body {
 
 .container {
     display: flex;
-    width: 600px;
-    height: 450px;
+    max-width: 600px;
     border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
     overflow: hidden;
@@ -26,12 +25,13 @@ body {
     margin: 2% 15%;
 }
 
-.product-image {
+.product-image__desktop {
     width: 50%;
     height: 100%;
-    background-image: url('/images/image-product-desktop.jpg');
-    background-size: cover;
-    background-position: center;
+}
+
+.product-image__mobile {
+    display: none;
 }
 
 .product-description {
@@ -112,12 +112,18 @@ button.product-description__cart-button:hover {
 }
 
 @media screen and (max-width: 768px) {
+    .product-image__desktop {
+        display: none;
+    }
+
+    .product-image__mobile {
+        display: block;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
         max-width: 340px;
-        height: 600px;
-        margin-top: 1vh;
     }
 
     .product-image {
