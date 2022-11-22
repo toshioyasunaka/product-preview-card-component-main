@@ -23,7 +23,7 @@ body {
     overflow: hidden;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 10vh;
+    margin: 2% 15%;
 }
 
 .product-image {
@@ -111,11 +111,7 @@ button.product-description__cart-button:hover {
     text-decoration: none;
 }
 
-@media screen and (max-width: 375px) {
-    body {
-        padding: 23px;
-    }
-
+@media screen and (max-width: 768px) {
     .container {
         display: flex;
         flex-direction: column;
